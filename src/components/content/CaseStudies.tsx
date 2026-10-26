@@ -53,7 +53,7 @@ export const CaseStudies: React.FC = () => {
   ];
 
   return (
-    <section id="case-studies" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-[#521D0E]/15">
+    <section id="case-studies" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-[#521D0E]/15 overflow-hidden">
       {/* Decorative Fluffy Clouds Matching Hero Section */}
       <div 
         aria-hidden="true" 
@@ -73,7 +73,7 @@ export const CaseStudies: React.FC = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
         <div className="space-y-4 max-w-2xl">
           <div className="relative inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#FE3912] via-[#E02E09] to-[#C22405] backdrop-blur-xl border border-white/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.7),0_6px_16px_-3px_rgba(254,57,18,0.35)] text-white overflow-hidden">
             <div 
@@ -98,13 +98,13 @@ export const CaseStudies: React.FC = () => {
         {cases.map((item) => (
           <article
             key={item.id}
-            className="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 hover:from-[#45180B] hover:to-[#2D0D05] backdrop-blur-xl border border-white/20 hover:border-[#FE3912]/60 shadow-[0_16px_36px_rgba(82,29,14,0.35)] hover:shadow-[0_24px_50px_rgba(254,57,18,0.3)] transition-all duration-300 text-white"
+            className="p-5 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 hover:from-[#45180B] hover:to-[#2D0D05] backdrop-blur-xl border border-white/20 hover:border-[#FE3912]/60 shadow-[0_16px_36px_rgba(82,29,14,0.35)] hover:shadow-[0_24px_50px_rgba(254,57,18,0.3)] transition-all duration-300 text-white"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
               
               {/* Left Case Narrative */}
-              <div className="lg:col-span-7 space-y-5">
-                <div className="flex flex-wrap items-center gap-3">
+              <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-xs font-mono uppercase tracking-wider font-bold text-[#FE3912]">
                     {item.clientSector}
                   </span>
@@ -118,7 +118,7 @@ export const CaseStudies: React.FC = () => {
                   {item.title}
                 </h3>
 
-                <div className="space-y-3 text-sm text-orange-100/80 leading-relaxed font-normal">
+                <div className="space-y-3 text-xs sm:text-sm text-orange-100/80 leading-relaxed font-normal">
                   <p>
                     <strong className="text-orange-200 font-bold">The Architectural Bottleneck:</strong>{" "}
                     {item.challenge}
@@ -131,19 +131,19 @@ export const CaseStudies: React.FC = () => {
               </div>
 
               {/* Right Validated Results Grid */}
-              <div className="lg:col-span-5 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 space-y-4 shadow-inner">
+              <div className="lg:col-span-5 bg-white/10 backdrop-blur-md p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-white/20 space-y-4 shadow-inner">
                 <h4 className="text-xs uppercase tracking-widest font-mono text-orange-200/70 font-bold">
                   Validated Production Benchmarks
                 </h4>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3.5">
+                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3">
                   {item.results.map((res, rIdx) => {
                     const Icon = res.icon;
                     return (
-                      <div key={rIdx} className="p-3.5 bg-white/10 rounded-xl border border-white/15 shadow-xs flex items-center justify-between">
+                      <div key={rIdx} className="p-3 sm:p-3.5 bg-white/10 rounded-xl border border-white/15 shadow-xs flex flex-wrap sm:flex-nowrap items-center justify-between gap-2">
                         <div>
                           <p className="text-[11px] text-orange-200/70 font-medium">{res.label}</p>
-                          <p className="font-mono text-xl font-extrabold text-white mt-0.5">{res.value}</p>
+                          <p className="font-mono text-lg sm:text-xl font-extrabold text-white mt-0.5">{res.value}</p>
                         </div>
                         <div className="text-right flex items-center gap-1.5 text-xs font-bold text-orange-200 bg-white/10 px-2.5 py-1 rounded-lg border border-white/20">
                           <Icon className="w-3.5 h-3.5 text-[#FE3912]" />

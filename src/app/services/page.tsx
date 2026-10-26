@@ -416,7 +416,7 @@ export default function ServicesPage() {
               return (
                 <div
                   key={service.id}
-                  className="rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 text-white border border-white/20 p-8 sm:p-12 shadow-[0_20px_45px_rgba(82,29,14,0.4)] relative overflow-hidden"
+                  className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 text-white border border-white/20 p-5 sm:p-8 lg:p-12 shadow-[0_20px_45px_rgba(82,29,14,0.4)] relative overflow-hidden"
                 >
                   {/* Decorative Glow */}
                   <div 
@@ -425,22 +425,22 @@ export default function ServicesPage() {
                   />
 
                   {/* Header Row */}
-                  <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-white/15">
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-[#FE3912] shadow-inner">
-                        <Icon className="w-7 h-7" />
+                  <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-6 sm:mb-8 border-b border-white/15">
+                    <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-[#FE3912] shadow-inner shrink-0">
+                        <Icon className="w-6 h-6 sm:w-7 sm:h-7" />
                       </div>
                       <div>
                         <span className="text-xs font-mono uppercase tracking-widest text-[#FE3912] font-bold">
                           Service {service.number} · {service.category}
                         </span>
-                        <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-0.5">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white mt-0.5">
                           {service.title}
                         </h3>
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                       <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-white bg-white/10 px-3.5 py-1.5 rounded-xl border border-white/20">
                         <Clock className="w-3.5 h-3.5 text-[#FE3912]" />
                         {service.timeline}

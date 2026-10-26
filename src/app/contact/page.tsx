@@ -117,20 +117,20 @@ export default function ContactPage() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#521D0E] leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#521D0E] leading-tight break-words">
             Let&apos;s Build Something <span className="text-[#EA3412]">Extraordinary</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-[#521D0E]/85 leading-relaxed font-medium">
+          <p className="text-sm sm:text-base md:text-lg text-[#521D0E]/85 leading-relaxed font-medium">
             Tell us about your project vision. Our Lead System Architect will analyze your requirements, prepare a technical feasibility breakdown, and deliver a fixed-price proposal.
           </p>
         </div>
 
         {/* 2-Column Layout: Form & Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
           {/* Left Column: Interactive Proposal Form */}
-          <div className="lg:col-span-7 rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 text-white border border-white/20 p-8 sm:p-12 shadow-[0_20px_45px_rgba(82,29,14,0.4)] backdrop-blur-xl relative overflow-hidden">
+          <div className="lg:col-span-7 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 text-white border border-white/20 p-5 sm:p-8 lg:p-12 shadow-[0_20px_45px_rgba(82,29,14,0.4)] backdrop-blur-xl relative overflow-hidden">
             
             {submitted ? (
               <div className="py-12 text-center space-y-6">
@@ -270,14 +270,14 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full inline-flex items-center justify-center gap-2 py-4 px-8 rounded-xl bg-[#FE3912] hover:bg-[#E02E09] text-white font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-xl active:scale-[0.98] disabled:opacity-70"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3.5 sm:py-4 px-4 sm:px-8 rounded-xl bg-[#FE3912] hover:bg-[#E02E09] text-white font-bold text-xs sm:text-sm uppercase tracking-wider text-center transition-all shadow-lg hover:shadow-xl active:scale-[0.98] disabled:opacity-70"
                 >
                   {loading ? (
                     <span>Submitting Your Scoping Inquiry...</span>
                   ) : (
                     <>
                       <span>Submit Request for Free Architecture Proposal</span>
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4 shrink-0" />
                     </>
                   )}
                 </button>
@@ -292,10 +292,10 @@ export default function ContactPage() {
           </div>
 
           {/* Right Column: Contact Details, Working Hours & Guarantees */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-6 sm:space-y-8">
             
             {/* Direct Contact Card */}
-            <div className="p-8 rounded-3xl bg-[#3B1408] text-white border border-white/20 shadow-xl space-y-6">
+            <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#3B1408] text-white border border-white/20 shadow-xl space-y-6">
               <h3 className="text-xl font-extrabold text-white">
                 Direct Contact & Consultation
               </h3>

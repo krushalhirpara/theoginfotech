@@ -58,7 +58,7 @@ export const TechMatrix: React.FC = () => {
   };
 
   return (
-    <section id="tech-stack" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-[#521D0E]/15">
+    <section id="tech-stack" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-[#521D0E]/15 overflow-hidden">
       {/* Decorative Fluffy Clouds Matching Hero Section */}
       <div 
         aria-hidden="true" 
@@ -100,7 +100,7 @@ export const TechMatrix: React.FC = () => {
       </div>
 
       {/* Category Selection Tabs */}
-      <div className="relative z-10 flex flex-wrap gap-2.5 mb-8 p-1.5 bg-[#3B1408]/85 backdrop-blur-xl rounded-2xl border border-white/20 w-fit shadow-md">
+      <div className="relative z-10 flex flex-wrap gap-2 sm:gap-2.5 mb-8 p-1.5 bg-[#3B1408]/85 backdrop-blur-xl rounded-2xl border border-white/20 w-full sm:w-fit shadow-md">
         {categories.map((cat) => {
           const Icon = cat.icon;
           const isActive = activeCategory === cat.key;
@@ -108,7 +108,7 @@ export const TechMatrix: React.FC = () => {
             <button
               key={cat.key}
               onClick={() => setActiveCategory(cat.key)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+              className={`flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                 isActive
                   ? "bg-[#FE3912] text-white shadow-md border border-white/30"
                   : "text-orange-200/80 hover:text-white hover:bg-white/10"
@@ -122,11 +122,11 @@ export const TechMatrix: React.FC = () => {
       </div>
 
       {/* Grid of Tech Items */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
         {techData[activeCategory].map((item, idx) => (
           <div
             key={idx}
-            className="p-6 rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 hover:from-[#45180B] hover:to-[#2D0D05] backdrop-blur-xl border border-white/20 hover:border-[#FE3912]/60 shadow-[0_14px_32px_rgba(82,29,14,0.3)] hover:shadow-[0_20px_45px_rgba(254,57,18,0.25)] transition-all duration-300 flex flex-col justify-between text-white"
+            className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 hover:from-[#45180B] hover:to-[#2D0D05] backdrop-blur-xl border border-white/20 hover:border-[#FE3912]/60 shadow-[0_14px_32px_rgba(82,29,14,0.3)] hover:shadow-[0_20px_45px_rgba(254,57,18,0.25)] transition-all duration-300 flex flex-col justify-between text-white"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">

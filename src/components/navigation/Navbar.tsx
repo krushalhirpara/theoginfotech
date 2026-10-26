@@ -30,11 +30,11 @@ export const Navbar: React.FC = () => {
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-cyan/15 to-accent-violet/15 border border-slate-200 flex items-center justify-center text-accent-cyan group-hover:border-accent-cyan group-hover:shadow-glow-cyan transition-all duration-300">
             <Cpu className="w-5 h-5 text-accent-cyan" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-extrabold tracking-tight text-slate-900 text-base leading-none group-hover:text-[#FE3912] transition-colors">
+          <div className="flex flex-col min-w-0">
+            <span className="font-extrabold tracking-tight text-slate-900 text-sm sm:text-base leading-none group-hover:text-[#FE3912] transition-colors">
               THE OG INFOTECH
             </span>
-            <span className="text-[10px] font-mono text-slate-500 tracking-widest uppercase mt-1">
+            <span className="text-[10px] font-mono text-slate-500 tracking-widest uppercase mt-1 truncate max-w-[170px] sm:max-w-none">
               Website, App, Software & AI Solutions
             </span>
           </div>
@@ -132,7 +132,7 @@ export const Navbar: React.FC = () => {
             <a
               href="/contact"
               onClick={(e) => handleNavClick(e, "/contact", "contact")}
-              className="block w-full text-center py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider bg-slate-900 text-white"
+              className="block w-full text-center py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider bg-[#521D0E] hover:bg-[#3B1408] text-white transition-colors"
             >
               Get Free Quote
             </a>

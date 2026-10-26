@@ -131,7 +131,7 @@ export const HeroSection: React.FC = () => {
               {/* Invisible Ghost Headline that permanently pre-allocates exact height across all devices */}
               <h1 
                 aria-hidden="true" 
-                className="invisible pointer-events-none select-none opacity-0 col-start-1 row-start-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.035em] leading-[1.08]"
+                className="invisible pointer-events-none select-none opacity-0 col-start-1 row-start-1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.03em] sm:tracking-[-0.035em] leading-[1.12] sm:leading-[1.08] break-words"
               >
                 Building{" "}
                 <span className="text-[#521D0E]">
@@ -144,7 +144,7 @@ export const HeroSection: React.FC = () => {
               </h1>
 
               {/* Active Visible Typing Headline */}
-              <h1 className="col-start-1 row-start-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.035em] leading-[1.08] text-[#EA3412]">
+              <h1 className="col-start-1 row-start-1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.03em] sm:tracking-[-0.035em] leading-[1.12] sm:leading-[1.08] break-words text-[#EA3412]">
                 Building{" "}
                 <span className="text-[#521D0E]">
                   {displayedGradient}
@@ -159,17 +159,17 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Enterprise Subheadline */}
-            <p className="text-base sm:text-lg text-[#521D0E]/85 max-w-xl font-medium leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-[#521D0E]/85 max-w-xl font-medium leading-relaxed">
               We design and develop high-converting Websites, Mobile Apps, custom Software, SaaS Platforms, 
               creative Graphics, UI/UX experiences, and smart AI Automations engineered to rank #1 and scale your business.
             </p>
 
             {/* Dual Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
               <a
                 href="/contact"
                 onClick={(e) => handleNavClick(e, "/contact", "contact")}
-                className="group relative inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl font-bold text-sm tracking-wide text-white bg-[#521D0E] hover:bg-[#3B1408] transition-all duration-300 shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                className="group relative inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl font-bold text-xs sm:text-sm tracking-wide text-white bg-[#521D0E] hover:bg-[#3B1408] transition-all duration-300 shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Get Free Project Quote</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -178,7 +178,7 @@ export const HeroSection: React.FC = () => {
               <a
                 href="/services"
                 onClick={(e) => handleNavClick(e, "/services", "services")}
-                className="group relative inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-bold text-sm tracking-wide text-[#521D0E] bg-white/30 hover:bg-white/45 backdrop-blur-md border border-white/60 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
+                className="group relative inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl font-bold text-xs sm:text-sm tracking-wide text-[#521D0E] bg-white/30 hover:bg-white/45 backdrop-blur-md border border-white/60 transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
               >
                 <Terminal className="w-4 h-4 text-[#EA3412] group-hover:rotate-12 transition-transform duration-300" />
                 <span>Explore 8 Core Services</span>
@@ -186,18 +186,18 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Micro Metrics in Matching Warm Sienna Tones */}
-            <div className="pt-4 border-t border-[#521D0E]/15 grid grid-cols-3 gap-4 max-w-lg">
+            <div className="pt-4 border-t border-[#521D0E]/15 grid grid-cols-3 gap-2 sm:gap-4 max-w-lg">
               <div>
-                <p className="font-mono text-2xl font-bold text-[#521D0E] tracking-tight">100/100</p>
-                <p className="text-xs text-[#521D0E]/75 mt-0.5 font-medium">SEO & PageSpeed</p>
+                <p className="font-mono text-xl sm:text-2xl font-bold text-[#521D0E] tracking-tight">100/100</p>
+                <p className="text-[11px] sm:text-xs text-[#521D0E]/75 mt-0.5 font-medium leading-tight">SEO & PageSpeed</p>
               </div>
               <div>
-                <p className="font-mono text-2xl font-bold text-[#EA3412] tracking-tight">8 Core</p>
-                <p className="text-xs text-[#521D0E]/75 mt-0.5 font-medium">Digital Services</p>
+                <p className="font-mono text-xl sm:text-2xl font-bold text-[#EA3412] tracking-tight">8 Core</p>
+                <p className="text-[11px] sm:text-xs text-[#521D0E]/75 mt-0.5 font-medium leading-tight">Digital Services</p>
               </div>
               <div>
-                <p className="font-mono text-2xl font-bold text-[#521D0E] tracking-tight">10x ROI</p>
-                <p className="text-xs text-[#521D0E]/75 mt-0.5 font-medium">AI Automation</p>
+                <p className="font-mono text-xl sm:text-2xl font-bold text-[#521D0E] tracking-tight">10x ROI</p>
+                <p className="text-[11px] sm:text-xs text-[#521D0E]/75 mt-0.5 font-medium leading-tight">AI Automation</p>
               </div>
             </div>
 

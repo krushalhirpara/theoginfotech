@@ -442,16 +442,16 @@ export default function TechStackPage() {
                 <div
                   key={cat.id}
                   id={cat.id}
-                  className="bg-[#3B1408]/95 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20 shadow-2xl text-white scroll-mt-24"
+                  className="bg-[#3B1408]/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border border-white/20 shadow-2xl text-white scroll-mt-24"
                 >
                   {/* Category Card Header */}
-                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-white/15">
-                    <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FE3912] to-[#B32607] flex items-center justify-center shadow-lg border border-white/30 shrink-0">
-                        <Icon className="w-7 h-7 text-white" />
+                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 sm:pb-8 border-b border-white/15">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-[#FE3912] to-[#B32607] flex items-center justify-center shadow-lg border border-white/30 shrink-0">
+                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                       </div>
                       <div className="space-y-1">
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                           <span className="text-xs font-mono font-bold text-amber-300 tracking-wider">
                             CATEGORY {cat.categoryNumber}
                           </span>
@@ -459,23 +459,23 @@ export default function TechStackPage() {
                             {cat.badge}
                           </span>
                         </div>
-                        <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight">
                           {cat.title}
                         </h3>
-                        <p className="text-sm text-orange-200/90 font-medium">
+                        <p className="text-xs sm:text-sm text-orange-200/90 font-medium">
                           {cat.tagline}
                         </p>
                       </div>
                     </div>
 
                     {/* Key Benchmarks */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-white/5 p-3 rounded-2xl border border-white/10">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 bg-white/5 p-2.5 sm:p-3 rounded-2xl border border-white/10">
                       {cat.keyMetrics.map((km, i) => (
-                        <div key={i} className="text-center px-2 py-1">
+                        <div key={i} className="text-center px-1.5 sm:px-2 py-1">
                           <span className="block text-[10px] font-mono text-orange-200/80 uppercase">
                             {km.label}
                           </span>
-                          <span className="text-sm font-extrabold text-amber-300">
+                          <span className="text-xs sm:text-sm font-extrabold text-amber-300">
                             {km.value}
                           </span>
                         </div>
@@ -491,20 +491,20 @@ export default function TechStackPage() {
                   </div>
 
                   {/* Individual Technologies Breakdown */}
-                  <div className="py-8 space-y-6">
+                  <div className="py-6 sm:py-8 space-y-6">
                     <h4 className="text-xs font-mono uppercase tracking-[0.2em] font-bold text-amber-300 flex items-center gap-2">
                       <Code2 className="w-4 h-4 text-[#FE3912]" />
                       <span>Component Technologies & Client Value</span>
                     </h4>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
                       {cat.technologies.map((tech, idx) => (
                         <div 
                           key={idx}
-                          className="bg-white/5 hover:bg-white/10 border border-white/15 rounded-2xl p-5 transition-all space-y-3"
+                          className="bg-white/5 hover:bg-white/10 border border-white/15 rounded-2xl p-4 sm:p-5 transition-all space-y-3"
                         >
-                          <div className="flex items-center justify-between gap-2">
-                            <span className="text-base font-bold text-white tracking-tight">
+                          <div className="flex flex-wrap items-center justify-between gap-2">
+                            <span className="text-sm sm:text-base font-bold text-white tracking-tight">
                               {tech.name}
                             </span>
                             <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-[#FE3912]/30 text-orange-200 border border-[#FE3912]/40">

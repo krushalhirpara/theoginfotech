@@ -417,12 +417,12 @@ export default function CaseStudiesPage() {
               <div
                 key={cs.id}
                 id={cs.id}
-                className="bg-[#3B1408]/95 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20 shadow-2xl text-white scroll-mt-24"
+                className="bg-[#3B1408]/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border border-white/20 shadow-2xl text-white scroll-mt-24"
               >
                 {/* Case Header */}
-                <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-8 border-b border-white/15">
+                <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 sm:pb-8 border-b border-white/15">
                   <div className="space-y-2 max-w-3xl">
-                    <div className="flex flex-wrap items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                       <span className="text-xs font-mono font-bold text-amber-300 tracking-wider">
                         CASE STUDY {cs.caseNumber}
                       </span>
@@ -434,10 +434,10 @@ export default function CaseStudiesPage() {
                       </span>
                     </div>
 
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-snug">
                       {cs.title}
                     </h3>
-                    <p className="text-base text-orange-200 font-semibold">
+                    <p className="text-sm sm:text-base text-orange-200 font-semibold">
                       {cs.headline}
                     </p>
                     <p className="text-xs sm:text-sm text-orange-100/80 leading-relaxed pt-1">

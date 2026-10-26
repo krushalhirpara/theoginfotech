@@ -40,7 +40,7 @@ export const EngineeringWorkflow: React.FC = () => {
   ];
 
   return (
-    <section id="methodology" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-[#521D0E]/15">
+    <section id="methodology" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 border-t border-[#521D0E]/15 overflow-hidden">
       {/* Decorative Fluffy Clouds Matching Hero Section */}
       <div 
         aria-hidden="true" 
@@ -60,7 +60,7 @@ export const EngineeringWorkflow: React.FC = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
         <div className="space-y-4 max-w-2xl">
           <div className="relative inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#FE3912] via-[#E02E09] to-[#C22405] backdrop-blur-xl border border-white/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.7),0_6px_16px_-3px_rgba(254,57,18,0.35)] text-white overflow-hidden">
             <div 
@@ -81,15 +81,15 @@ export const EngineeringWorkflow: React.FC = () => {
         </p>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {steps.map((step, i) => {
           const Icon = step.icon;
           return (
             <div
               key={i}
-              className="p-8 rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 hover:from-[#45180B] hover:to-[#2D0D05] backdrop-blur-xl border border-white/20 hover:border-[#FE3912]/60 shadow-[0_16px_36px_rgba(82,29,14,0.35)] hover:shadow-[0_24px_50px_rgba(254,57,18,0.3)] transition-all duration-300 flex flex-col justify-between group text-white"
+              className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#3B1408]/95 via-[#4A1A0C]/95 to-[#260B03]/95 hover:from-[#45180B] hover:to-[#2D0D05] backdrop-blur-xl border border-white/20 hover:border-[#FE3912]/60 shadow-[0_16px_36px_rgba(82,29,14,0.35)] hover:shadow-[0_24px_50px_rgba(254,57,18,0.3)] transition-all duration-300 flex flex-col justify-between group text-white"
             >
-              <div className="space-y-5">
+              <div className="space-y-4 sm:space-y-5">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs font-extrabold text-[#FE3912] tracking-wider uppercase">
                     {step.phase}
@@ -99,7 +99,7 @@ export const EngineeringWorkflow: React.FC = () => {
                   </div>
                 </div>
 
-                <h3 className="text-lg font-extrabold text-white group-hover:text-orange-200 transition-colors">
+                <h3 className="text-base sm:text-lg font-extrabold text-white group-hover:text-orange-200 transition-colors">
                   {step.title}
                 </h3>
 
@@ -108,7 +108,7 @@ export const EngineeringWorkflow: React.FC = () => {
                 </p>
               </div>
 
-              <div className="pt-5 mt-6 border-t border-white/15">
+              <div className="pt-4 sm:pt-5 mt-5 sm:mt-6 border-t border-white/15">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-orange-200/60 block mb-1 font-semibold">
                   Primary Milestone
                 </span>

@@ -285,16 +285,16 @@ export default function MethodologyPage() {
                 <div
                   key={phase.phaseId}
                   id={phase.phaseId}
-                  className="bg-[#3B1408]/95 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20 shadow-2xl text-white scroll-mt-24"
+                  className="bg-[#3B1408]/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border border-white/20 shadow-2xl text-white scroll-mt-24"
                 >
                   {/* Phase Card Header */}
-                  <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-8 border-b border-white/15">
-                    <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FE3912] to-[#B32607] flex items-center justify-center shadow-lg border border-white/30 shrink-0">
-                        <Icon className="w-7 h-7 text-white" />
+                  <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-6 sm:pb-8 border-b border-white/15">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-[#FE3912] to-[#B32607] flex items-center justify-center shadow-lg border border-white/30 shrink-0">
+                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                       </div>
                       <div className="space-y-1">
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                           <span className="text-xs font-mono font-bold text-amber-300 tracking-wider">
                             {phase.phaseNumber}
                           </span>
@@ -302,16 +302,16 @@ export default function MethodologyPage() {
                             Timeline: {phase.timeline}
                           </span>
                         </div>
-                        <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight">
                           {phase.title}
                         </h3>
-                        <p className="text-sm text-orange-200 font-semibold">
+                        <p className="text-xs sm:text-sm text-orange-200 font-semibold">
                           {phase.tagline}
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex flex-col items-start lg:items-end gap-2 bg-white/5 p-4 rounded-2xl border border-white/10 shrink-0">
+                    <div className="flex flex-col items-start lg:items-end gap-1.5 sm:gap-2 bg-white/5 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/10 shrink-0">
                       <span className="text-[10px] font-mono uppercase text-orange-200/80">
                         Client Time Needed
                       </span>

@@ -649,16 +649,16 @@ export const DinoGame: React.FC = () => {
         />
 
         {/* Console Header Bar */}
-        <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/15">
+        <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-4 border-b border-white/15">
           
           {/* Title & Badge */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FE3912] to-[#B32607] flex items-center justify-center shadow-md border border-white/30 text-lg">
+          <div className="flex items-start sm:items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FE3912] to-[#B32607] flex items-center justify-center shadow-md border border-white/30 text-lg shrink-0 mt-0.5 sm:mt-0">
               🦖
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="font-extrabold text-white text-base tracking-tight">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-extrabold text-white text-sm sm:text-base tracking-tight">
                   T-Rex Game — Google Dino Run
                 </span>
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-wider bg-amber-400/20 text-amber-300 border border-amber-400/30">
@@ -672,7 +672,7 @@ export const DinoGame: React.FC = () => {
           </div>
 
           {/* Score Counter & Sound Controls */}
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto justify-between sm:justify-end pt-1 sm:pt-0">
             {/* High Score Badge */}
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 border border-white/15 text-xs font-mono">
               <Trophy className="w-3.5 h-3.5 text-amber-300" />
@@ -713,7 +713,7 @@ export const DinoGame: React.FC = () => {
             width={800}
             height={200}
             tabIndex={0}
-            className="w-full h-auto block aspect-[4/1] min-h-[170px] max-h-[220px] outline-none touch-none select-none"
+            className="w-full h-auto block aspect-[4/1] min-h-[140px] sm:min-h-[170px] max-h-[220px] outline-none touch-none select-none"
           />
 
           {/* IDLE OVERLAY: Click to start prompt */}
@@ -732,16 +732,16 @@ export const DinoGame: React.FC = () => {
                   (e.currentTarget as HTMLElement).blur();
                   startGame();
                 }}
-                className="w-14 h-14 rounded-2xl bg-[#FE3912] hover:bg-[#E02E09] text-white flex items-center justify-center shadow-xl border-2 border-white/40 transform hover:scale-110 active:scale-95 transition-all outline-none"
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#FE3912] hover:bg-[#E02E09] text-white flex items-center justify-center shadow-xl border-2 border-white/40 transform hover:scale-110 active:scale-95 transition-all outline-none"
                 aria-label="Start Game"
               >
-                <Play className="w-7 h-7 ml-1 fill-white" />
+                <Play className="w-6 h-6 sm:w-7 sm:h-7 ml-1 fill-white" />
               </button>
-              <div className="text-center">
-                <p className="text-sm sm:text-base font-extrabold text-[#521D0E] uppercase tracking-wider drop-shadow-xs">
+              <div className="text-center px-4">
+                <p className="text-xs sm:text-base font-extrabold text-[#521D0E] uppercase tracking-wider drop-shadow-xs">
                   Press SPACE or Tap Anywhere to Run
                 </p>
-                <p className="text-xs text-[#521D0E]/80 font-medium">
+                <p className="text-[11px] sm:text-xs text-[#521D0E]/80 font-medium">
                   Jump over cacti & avoid flying pterodactyls!
                 </p>
               </div>
@@ -755,9 +755,9 @@ export const DinoGame: React.FC = () => {
                 e.stopPropagation();
                 resetGame();
               }}
-              className="absolute inset-0 bg-[#3B1408]/75 backdrop-blur-xs flex flex-col items-center justify-center gap-3 animate-fade-in"
+              className="absolute inset-0 bg-[#3B1408]/75 backdrop-blur-xs flex flex-col items-center justify-center gap-3 animate-fade-in px-4"
             >
-              <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-widest uppercase font-mono drop-shadow-md">
+              <span className="text-xl sm:text-3xl font-extrabold text-white tracking-widest uppercase font-mono drop-shadow-md">
                 G A M E &nbsp; O V E R
               </span>
               <p className="text-xs sm:text-sm text-orange-200 font-semibold font-mono">
@@ -770,7 +770,7 @@ export const DinoGame: React.FC = () => {
                   (e.currentTarget as HTMLElement).blur();
                   resetGame();
                 }}
-                className="mt-1 inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#FE3912] to-[#B32607] hover:brightness-110 text-white font-bold text-xs uppercase tracking-wider shadow-lg active:scale-95 transition-all outline-none"
+                className="mt-1 inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#FE3912] to-[#B32607] hover:brightness-110 text-white font-bold text-xs uppercase tracking-wider shadow-lg active:scale-95 transition-all outline-none"
               >
                 <RotateCcw className="w-4 h-4" />
                 <span>Play Again</span>
@@ -780,15 +780,15 @@ export const DinoGame: React.FC = () => {
         </div>
 
         {/* Console Footer & Keyboard Controls Guide */}
-        <div className="relative z-10 mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-orange-200/90 font-medium pt-3 border-t border-white/10">
+        <div className="relative z-10 mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 text-xs text-orange-200/90 font-medium pt-3 border-t border-white/10">
           <div className="flex items-center gap-2">
-            <Gamepad2 className="w-4 h-4 text-amber-300" />
-            <span>
+            <Gamepad2 className="w-4 h-4 text-amber-300 shrink-0" />
+            <span className="leading-relaxed">
               <strong>Controls:</strong> Press <kbd className="px-1.5 py-0.5 rounded bg-white/15 border border-white/20 font-mono text-[10px]">SPACE</kbd> or <kbd className="px-1.5 py-0.5 rounded bg-white/15 border border-white/20 font-mono text-[10px]">↑</kbd> to Jump &bull; <kbd className="px-1.5 py-0.5 rounded bg-white/15 border border-white/20 font-mono text-[10px]">↓</kbd> to Duck &bull; Tap on Mobile
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             <span className="text-white/80 text-[11px] font-mono">
               60 FPS HTML5 Engine &bull; Zero Server Lag

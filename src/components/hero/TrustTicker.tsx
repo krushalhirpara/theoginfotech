@@ -81,11 +81,11 @@ export const TrustTicker: React.FC = () => {
       {/* Left/Right Edge Gradient Masks in Warm Sunset Tones */}
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute inset-y-0 left-0 w-24 md:w-44 z-10 bg-gradient-to-r from-[#F5A069] via-[#F5A069]/80 to-transparent" 
+        className="pointer-events-none absolute inset-y-0 left-0 w-10 sm:w-24 md:w-44 z-10 bg-gradient-to-r from-[#F5A069] via-[#F5A069]/80 to-transparent" 
       />
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute inset-y-0 right-0 w-24 md:w-44 z-10 bg-gradient-to-l from-[#F5A069] via-[#F5A069]/80 to-transparent" 
+        className="pointer-events-none absolute inset-y-0 right-0 w-10 sm:w-24 md:w-44 z-10 bg-gradient-to-l from-[#F5A069] via-[#F5A069]/80 to-transparent" 
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
