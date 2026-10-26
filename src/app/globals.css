@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-jakarta: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    color-scheme: light;
+    background-color: #F8AB79;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F8AB79;
+    color: #521D0E;
+    font-family: var(--font-jakarta);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Warm theme scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F9B384;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #521D0E;
+    border-radius: 4px;
+    border: 2px solid #F9B384;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B1408;
+  }
+}
+
+/* Warm Frosted Glass & Clean Light Components */
+@layer components {
+  .glass-panel-warm {
+    @apply bg-white/85 backdrop-blur-xl border border-white/90 shadow-[0_10px_30px_rgba(82,29,14,0.08)] rounded-2xl;
+  }
+
+  .glass-card-warm {
+    @apply relative bg-white/85 hover:bg-white backdrop-blur-xl 
+           border border-white/90 hover:border-[#FE3912]/50 
+           shadow-[0_10px_30px_rgba(82,29,14,0.07)] hover:shadow-[0_20px_45px_rgba(82,29,14,0.15)] 
+           transition-all duration-300 ease-out-expo 
+           hover:-translate-y-1.5 rounded-3xl overflow-hidden;
+  }
+
+  .text-hero-heading {
+    @apply font-extrabold tracking-tight text-[#521D0E];
+  }
+}
+
+/* Pause marquee on hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(-7deg);
+  }
+  50% {
+    transform: rotate(7deg);
+  }
+}
+
+@keyframes cloud-float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-5px) translateX(10px);
+  }
+}
+
+@keyframes cloud-float-reverse {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(5px) translateX(-10px);
+  }
+}
